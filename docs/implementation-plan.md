@@ -1,0 +1,6 @@
+# Implementation plan
+
+1. Convert and inspect CAD: scripts/convert.cjs reads supplied STEP, writes public/model.json plus docs/model-inspection.json. Record source hash, units, hierarchy, bounds, per-mesh names. Infer axes and component roles from geometry and inspect visually before defining deformation.
+2. Parameter engine: src/parameters.ts defines defaults/ranges and validation; src/geometry.ts maps immutable vertices per component. Tests cover invalid dimensions, exact defaults, each control, symmetry, and repeatability. Verify wheel and frame connections that can be supported by source topology.
+3. Interface: src/main.ts composes parameter controls, source information, visibility and save/load; src/viewer.ts owns Three.js rendering and camera state; src/styles.css follows graphite/orange concept. Preserve requested labels and units. Native HTML/TypeScript keeps the single-screen control surface small without a framework dependency.
+4. Verify: unit tests, strict TypeScript, production build, browser model inspection and control interactions; inspect desktop/mobile screenshots. Correct geometry or UI failures, document preview limitations. Add Windows launcher and README; package source and prebuilt app.

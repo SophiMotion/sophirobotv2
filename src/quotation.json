@@ -1,0 +1,517 @@
+{
+  "source": "SophiRobot BOM list.xlsx",
+  "currency": "CNY",
+  "sections": [
+    {
+      "name": "Frame + mobile platform quotation",
+      "scope": "1 frame and mobile platform",
+      "totalFen": 260993,
+      "totalCells": [
+        "I31"
+      ],
+      "items": [
+        {
+          "name": "PVC black 50 (OD)x2.4mm",
+          "quantity": 4,
+          "note": "Per meter",
+          "sourceRow": 4
+        },
+        {
+          "name": "Planar bearing: 17x10x5mm",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 5
+        },
+        {
+          "name": "8080 aluminium profile base plate",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 6
+        },
+        {
+          "name": "Aluminium profile (8080 aluminium profile)",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 7
+        },
+        {
+          "name": "Aluminium profile (4040 aluminium profile)",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 8
+        },
+        {
+          "name": "4040 Black Corner Size",
+          "quantity": 40,
+          "note": "",
+          "sourceRow": 9
+        },
+        {
+          "name": "Aluminium base sheet metal",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 10
+        },
+        {
+          "name": "Aluminum alloy flange couplings for 8mm shaft  flange disc",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 11
+        },
+        {
+          "name": "6mm large hole stainless steel corner wire iron plate right angle 90-degree",
+          "quantity": 1,
+          "note": "Pack of 10",
+          "sourceRow": 12
+        },
+        {
+          "name": "Black T-bolt and nut (Black Model 40-M8x20) package for 4040 aluminium profile",
+          "quantity": 15,
+          "note": "Pack of 10",
+          "sourceRow": 13
+        },
+        {
+          "name": "T-nut M6 for 4040 aluminium profile",
+          "quantity": 4,
+          "note": "Pack of 50",
+          "sourceRow": 14
+        },
+        {
+          "name": "Socket head M4X18mm",
+          "quantity": 2,
+          "note": "Pack of 50",
+          "sourceRow": 15
+        },
+        {
+          "name": "Socket head M3X14mm",
+          "quantity": 1,
+          "note": "Pack of 100",
+          "sourceRow": 16
+        },
+        {
+          "name": "Countersunk hex bolt M4X14",
+          "quantity": 2,
+          "note": "Pack of 50",
+          "sourceRow": 17
+        },
+        {
+          "name": "Washer M4X12mm",
+          "quantity": 1,
+          "note": "Pack of 100",
+          "sourceRow": 18
+        },
+        {
+          "name": "M4 locknut",
+          "quantity": 1,
+          "note": "Pack of 50",
+          "sourceRow": 19
+        },
+        {
+          "name": "Thin head socket head M6X15mm",
+          "quantity": 2,
+          "note": "Pack of 20",
+          "sourceRow": 20
+        },
+        {
+          "name": "Grade High-Strength Pan Head Bolt, Round Head Hex Socket head M6X20mm",
+          "quantity": 1,
+          "note": "Pack of 50",
+          "sourceRow": 21
+        },
+        {
+          "name": "Black 304 stainless steel flat pad enlarged washer M6*12*1.6",
+          "quantity": 1,
+          "note": "Pack of 50",
+          "sourceRow": 22
+        },
+        {
+          "name": "Thin head socket head M8X20mm",
+          "quantity": 4,
+          "note": "Pack of 5",
+          "sourceRow": 23
+        },
+        {
+          "name": "M8 locknut",
+          "quantity": 1,
+          "note": "Pack of 20",
+          "sourceRow": 24
+        },
+        {
+          "name": "QD 304 stainless steel/carbon steel internal threaded cylindrical pin GB120 positioning pin pin internal threaded guide post φ8*50*M5",
+          "quantity": 1,
+          "note": "Pack of 2",
+          "sourceRow": 25
+        },
+        {
+          "name": "Front wheel drive mounting",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 26
+        },
+        {
+          "name": "Rear wheel drive mounting",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 27
+        },
+        {
+          "name": "Airless tire_V5",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 28
+        },
+        {
+          "name": "Wheel",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 29
+        },
+        {
+          "name": "The motor controls pulses with a 57-step motor, an integrated closed-loop integrated open-loop motor",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 30
+        }
+      ]
+    },
+    {
+      "name": "Head quotation",
+      "scope": "1 head",
+      "totalFen": 148432,
+      "totalCells": [
+        "I42"
+      ],
+      "items": [
+        {
+          "name": "Head rotation",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 32
+        },
+        {
+          "name": "Head yaw",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 33
+        },
+        {
+          "name": "Head yaw cover",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 34
+        },
+        {
+          "name": "Head yaw_2",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 35
+        },
+        {
+          "name": "BLDC MOTOR (LINZHU 01)",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 36
+        },
+        {
+          "name": "BLDC motor cable socket XT30 (2+2)-F Female Head (Standard Model)",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 37
+        },
+        {
+          "name": "STEP MOTOR",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 38
+        },
+        {
+          "name": "Ball bearing: 40x50x6mm",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 39
+        },
+        {
+          "name": "Plannar bearing: 50x70x5mm",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 40
+        },
+        {
+          "name": "Planar bearing: 30x47x4mm",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 41
+        }
+      ]
+    },
+    {
+      "name": "Arm quotation",
+      "scope": "2 arms + 2 hands",
+      "totalFen": 802296,
+      "totalCells": [
+        "I65",
+        "I48"
+      ],
+      "items": [
+        {
+          "name": "Shoulder_1",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 49
+        },
+        {
+          "name": "Shoulder_2",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 50
+        },
+        {
+          "name": "Shoulder_3A_V3",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 51
+        },
+        {
+          "name": "Shoulder_3B_V3",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 52
+        },
+        {
+          "name": "Arm rotation_1A",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 53
+        },
+        {
+          "name": "Arm rotation_1B",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 54
+        },
+        {
+          "name": "Arm rotation_2",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 55
+        },
+        {
+          "name": "Arm twist_1A",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 56
+        },
+        {
+          "name": "Arm twist_1B",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 57
+        },
+        {
+          "name": "Arm twist cover",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 58
+        },
+        {
+          "name": "BLDC motor cable socket XT30 (2+2)-F Female Head (Standard Model)",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 59
+        },
+        {
+          "name": "BLDC MOTOR (LINZHU 01)",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 60
+        },
+        {
+          "name": "STEP MOTOR",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 61
+        },
+        {
+          "name": "Ball bearing: 40x50x6mm",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 62
+        },
+        {
+          "name": "Plannar bearing: 50x70x5mm",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 63
+        },
+        {
+          "name": "Planar bearing: 30x47x4mm",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 64
+        },
+        {
+          "name": "Arm wrist rotation_A_V1",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 43
+        },
+        {
+          "name": "Arm wrist rotation_B_V2",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 44
+        },
+        {
+          "name": "Clamp 1",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 45
+        },
+        {
+          "name": "Clamp 2",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 46
+        },
+        {
+          "name": "Serial intelligent bus magnetic coded servo HX-30HM dual-axis 360-degree",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 47
+        }
+      ]
+    },
+    {
+      "name": "Leg quotation",
+      "scope": "2 legs",
+      "totalFen": 319620,
+      "totalCells": [
+        "I73"
+      ],
+      "items": [
+        {
+          "name": "Hip Joint",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 66
+        },
+        {
+          "name": "Hip Joint cover",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 67
+        },
+        {
+          "name": "Knee Joint_A",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 68
+        },
+        {
+          "name": "Knee joint_B",
+          "quantity": 2,
+          "note": "",
+          "sourceRow": 69
+        },
+        {
+          "name": "Arm twist_1A",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 70
+        },
+        {
+          "name": "Arm twist_1B",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 71
+        },
+        {
+          "name": "STEP MOTOR",
+          "quantity": 4,
+          "note": "",
+          "sourceRow": 72
+        }
+      ]
+    },
+    {
+      "name": "Control system quotation",
+      "scope": "1 control system",
+      "totalFen": 121652,
+      "totalCells": [
+        "I83"
+      ],
+      "items": [
+        {
+          "name": "2/57 Stepper Motor Driver TB6600 Upgraded Version 32 Subdivision 4.0A 42V (Pulse 3-24V)",
+          "quantity": 9,
+          "note": "",
+          "sourceRow": 74
+        },
+        {
+          "name": "36V to 12V 10A large aluminum power converter, waterproof buck converter",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 75
+        },
+        {
+          "name": "Magnetic coded servo debugging board",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 76
+        },
+        {
+          "name": "Servo extension cable",
+          "quantity": 10,
+          "note": "",
+          "sourceRow": 77
+        },
+        {
+          "name": "battery",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 78
+        },
+        {
+          "name": "wire",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 79
+        },
+        {
+          "name": "STM32F103VET6",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 80
+        },
+        {
+          "name": "ESP32 Carrier Board",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 81
+        },
+        {
+          "name": "ESP32",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 82
+        }
+      ]
+    },
+    {
+      "name": "Advanced intelligence system quotation",
+      "scope": "1 advanced intelligence system",
+      "totalFen": 383200,
+      "totalCells": [
+        "I85"
+      ],
+      "items": [
+        {
+          "name": "jetson",
+          "quantity": 1,
+          "note": "",
+          "sourceRow": 84
+        }
+      ]
+    }
+  ]
+}

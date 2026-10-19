@@ -1,0 +1,12 @@
+{
+  "new": {
+    "label": "V2 (wheel is hiding inside)",
+    "url": "model-appearance-new.json",
+    "sha256": "0b1e4287cef3bfbb79eb1360498a133999028803f9fbdb80ae795265134287ec"
+  },
+  "old": {
+    "label": "V1 (wheel is outside)",
+    "url": "model-appearance-old.json",
+    "sha256": "baf5b29933627a39289b7b40c6db23a8986fd2aa2e24d20bac9bb171a5e71e80"
+  }
+}

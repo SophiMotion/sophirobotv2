@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+dist/
+*.zip
+.qa/
+.superpowers/
+deliverables/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+*.inspect.ndjson
+!public/fusion/SophiRobot-Fusion-Export.zip
+!public/fusion-old/SophiRobot-Fusion-Export.zip

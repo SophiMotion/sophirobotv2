@@ -1,0 +1,10 @@
+import {expect,it} from 'vitest';
+import {translate,normalizeLanguage} from '../src/i18n';
+import {fields} from '../src/parameters';
+import {matchesBomRow} from '../src/bom-controls';
+import {exampleBom} from '../src/bom-data';
+it('defaults to English and accepts only supported languages',()=>{expect(normalizeLanguage(null)).toBe('en');expect(normalizeLanguage('fr')).toBe('en');expect(normalizeLanguage('zh-CN')).toBe('zh-CN');});
+it('translates interface and dynamic labels while preserving English originals',()=>{expect(translate('Base length','zh-CN')).toBe('底座长度');expect(translate('Base length','en')).toBe('Base length');expect(translate('Arm L','zh-CN')).toBe('左臂');expect(translate('■ Stop celebrate','zh-CN')).toContain('停止');});
+it('preserves numbers, identifiers and whitespace',()=>{expect(translate('  Base length  ','zh-CN')).toBe('  底座长度  ');expect(translate('SophiRobot','zh-CN')).toBe('SophiRobot');expect(translate('900 × 850 mm','zh-CN')).toBe('900 × 850 mm');});
+it('covers every parameter label and help message',()=>{for(const field of fields){expect(translate(field.label,'zh-CN')).not.toBe(field.label);expect(translate(field.help,'zh-CN')).not.toBe(field.help);}});
+it('finds BOM parts in either language without changing the underlying data',()=>{const row=exampleBom()[0],before={...row};expect(matchesBomRow(row,'底盘','Base')).toBe(true);expect(matchesBomRow(row,'钢','Base')).toBe(true);expect(matchesBomRow(row,'tray','Base')).toBe(true);expect(row).toEqual(before);});
