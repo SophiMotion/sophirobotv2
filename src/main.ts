@@ -29,7 +29,7 @@ const button=(id:string,label:string,ico:string,cls='')=>`<button id="${id}" cla
 
 $('#app').innerHTML=`
  <header class="header"><a class="brand" href="./" aria-label="SophiStudio home">${icon('cube')}<span>Sophi<span class="brand-x">Studio</span></span></a><div class="project-title">SophiRobot</div><div class="header-actions">${button('reset','Reset','reset')}${button('import','Load configuration','upload','icon-button')}${button('save','Save configuration','save','primary')}</div></header>
- <nav class="project-navigation" aria-label="Project pages"><a href="./" aria-current="page">Configurator</a><a id="open-bom" href="./bom.html" target="_blank" rel="noopener" aria-label="Quotation (opens in a new window)">Quotation <span aria-hidden="true">↗</span></a></nav>
+ <nav class="project-navigation" aria-label="Project pages"><a href="./" aria-current="page">Configurator</a><a id="open-bom" href="./bom.html">Quotation</a></nav>
  <main class="workspace">
   <aside class="sidebar" aria-label="Assembly parameters"><div class="panel-heading"><h1>Parameters</h1><p>Dimensions in millimeters</p></div>
    <div class="tabs" role="tablist" aria-label="Parameter groups">${(['Base','Wheels','Body','Limbs','Head','Motors','Appearance'] as Tab[]).map(t=>`<button role="tab" id="tab-${t}" aria-controls="fields" aria-selected="${t===activeTab}" data-tab="${t}">${t}</button>`).join('')}</div>
@@ -180,11 +180,6 @@ $('#download-fusion').addEventListener('click',()=>{
   const url=URL.createObjectURL(new Blob([JSON.stringify(request,null,2)],{type:'application/json'}));download(url,'SophiRobot-fusion-request.json');setTimeout(()=>URL.revokeObjectURL(url),1000);
   $('#fusion-result').textContent='Request downloaded. Run the companion script in Fusion to create the STEP file.';
  }catch(error){$('#fusion-result').textContent=error instanceof Error?error.message:'Unable to prepare the export request.';}
-});
-$('#open-bom').addEventListener('click',event=>{
- const url=new URL('./bom.html',location.href);
- const popup=window.open(url.href,'_blank','popup=yes,width=1440,height=960');
- if(popup){popup.opener=null;event.preventDefault();}
 });
 $('#source').addEventListener('click',()=>{if(model)$<HTMLDialogElement>('#source-dialog').showModal();});
 $('#close-dialog').addEventListener('click',()=>$<HTMLDialogElement>('#source-dialog').close());
