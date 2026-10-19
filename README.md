@@ -112,6 +112,7 @@ The revised source splits each thigh tube into two solids. Both solids share the
 
 ## GitHub Pages
 
-Live website: https://redring25.github.io/SophiRobot/
+Live website: https://sophimotion.github.io/sophirobotv2/
 
-Pushing to `master` runs `.github/workflows/pages.yml`: install dependencies, run tests, build with Vite, and deploy `dist` to GitHub Pages. The workflow can also be started manually from GitHub Actions. Both model variants, the quotation workbook, and Fusion helper downloads are included. Relative asset paths support the `/SophiRobot/` URL and local hosting.
+Pushing to `main` runs `.github/workflows/pages.yml`: install dependencies, run tests, build with Vite, and deploy `dist` to GitHub Pages. The workflow can also be started manually from GitHub Actions. Both model variants, the quotation workbook, and Fusion helper downloads are included. Relative asset paths support the `/SophiRobot/` URL and local hosting.
+
