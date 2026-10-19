@@ -109,3 +109,9 @@ Defaults: upper arm 120 mm, lower arm 200 mm, thigh 320 mm, lower leg 320 mm; sh
 The stored preview meshes normalize mechanical parts to the existing kinematic reference; deformation restores source geometry at the new defaults. The head cover extends 82.25 mm beyond the mechanism reference top. V2 asset identity is SHA-256 of appearance STEP bytes followed by V2 platform STEP bytes. The thirteen cover meshes retain their supplied source coordinates and use their own deformation rules. Changing cover dimensions is a mesh preview, not a CAD feature rebuild or a collision check.
 
 The revised source splits each thigh tube into two solids. Both solids share the same thigh sizing and hip motion. Upper-arm shells follow the elbow-side motor housing; forearm and leg shells resize along their corresponding tube attachments. Black-and-white material styling is retained.
+
+## GitHub Pages
+
+Live website: https://redring25.github.io/SophiRobot/
+
+Pushing to `master` runs `.github/workflows/pages.yml`: install dependencies, run tests, build with Vite, and deploy `dist` to GitHub Pages. The workflow can also be started manually from GitHub Actions. Both model variants, the quotation workbook, and Fusion helper downloads are included. Relative asset paths support the `/SophiRobot/` URL and local hosting.
