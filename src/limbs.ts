@@ -24,7 +24,8 @@ export function parseLimbConfig(value:unknown):{pose:LimbPoses;movable:LimbModes
  return {pose,movable:{...v.movable}};
 }
 import tubeReference from './model4-tubes.json';
-export interface LimbPart {limb:LimbKey;stage:number;lengthShift:0|1|2;tube?:'upper_arm_length'|'lower_arm_length'|'thigh_length'|'lower_leg_length'}
+import mountingParts from './mounting-parts.json';
+export interface LimbPart {limb:LimbKey;stage:number;lengthShift:0|1|2;mountLength?:'upper_arm_length'|'lower_arm_length'|'thigh_length'|'lower_leg_length';lengthFraction?:number;tube?:'upper_arm_length'|'lower_arm_length'|'thigh_length'|'lower_leg_length'}
 const parts=new Map<number,LimbPart>();
 const range=(a:number,b:number)=>Array.from({length:b-a+1},(_,i)=>a+i);
 function assign(limb:LimbKey,stage:number,lengthShift:0|1|2,ids:number[],tube?:LimbPart['tube']){for(const id of ids){if(parts.has(id))throw new Error(`Duplicate model 4 mapping ${id}`);parts.set(id,{limb,stage,lengthShift,tube});}}
@@ -61,6 +62,9 @@ assign('leg_r',2,0,[2010]);assign('leg_r',3,1,[2011]);
 assign('leg_l',2,0,[2012]);assign('leg_l',3,1,[2013]);
 assign('arm_r',3,1,[2014]);assign('arm_r',4,1,[2015]);
 assign('arm_l',3,1,[2016]);assign('arm_l',4,1,[2017]);
+for(const [id,mount] of Object.entries(mountingParts)){
+ if('referenceId' in mount){const parent=parts.get(mount.referenceId)!;parts.set(Number(id),{...parent,tube:undefined,...('lengthKey' in mount?{mountLength:mount.lengthKey as LimbPart['mountLength'],lengthFraction:mount.lengthFraction}:{})});}
+}
 export const limbPart=(id:number)=>parts.get(id);
 export const tubeIds=new Set([153,158,161,164,437,451,496,505,507,508]);
 export const motorCoverIds=new Set([179,182,183,263,446,490,491]);
@@ -73,7 +77,7 @@ export function deformLimb(id:number,positions:number[],p:Params){
  const dx=side*((arm?p.shoulder_length-450:p.hip_length-400)/2);
  const dz=arm?p.total_height-defaults.total_height:p.base_height-200+p.hip_position-800;
  const proximal=arm?p.upper_arm_length-200:p.thigh_length-250,distal=arm?p.lower_arm_length-300:p.lower_leg_length-250;
- const shift=part.lengthShift===0?0:proximal+(part.lengthShift===2?distal:0);
+ const shift=(part.lengthShift===0?0:proximal+(part.lengthShift===2?distal:0))+(part.mountLength?(p[part.mountLength]-defaults[part.mountLength])*(part.lengthFraction||0):0);
  const tube=part.tube?tubeReference[String(id===507?161:id===508?496:id) as keyof typeof tubeReference]:undefined;
  for(let i=0;i<a.length;i+=3){let x=a[i],y=a[i+1],z=a[i+2];
   if(tube&&part.tube){const [cx,cy]=tube.center,r=Math.hypot(x-cx,y-cy),nr=p.tube_diameter/2-p.tube_thickness+(r-23)*p.tube_thickness/2;

@@ -1,0 +1,123 @@
+{
+  "600": {
+    "chestHeightRatio": 0.88600000015371,
+    "centerX": -103.49999999997235
+  },
+  "601": {
+    "chestHeightRatio": 0.23,
+    "centerX": -30
+  },
+  "602": {
+    "chestHeightRatio": 0.88600000015371,
+    "centerX": 103.49999999997235
+  },
+  "603": {
+    "chestHeightRatio": 0.23,
+    "centerX": 30
+  },
+  "604": {
+    "chestHeightRatio": 0.23,
+    "centerX": -30
+  },
+  "605": {
+    "chestHeightRatio": 0.23,
+    "centerX": 30
+  },
+  "606": {
+    "chestHeightRatio": 0.722,
+    "centerX": 29.999999999999996
+  },
+  "607": {
+    "chestHeightRatio": 0.722,
+    "centerX": -30.000000000000018
+  },
+  "608": {
+    "referenceId": 158,
+    "lengthKey": "lower_arm_length",
+    "lengthFraction": 0.65
+  },
+  "609": {
+    "referenceId": 158,
+    "lengthKey": "lower_arm_length",
+    "lengthFraction": 0.65
+  },
+  "610": {
+    "referenceId": 161,
+    "lengthKey": "thigh_length",
+    "lengthFraction": 0.7820312499999964
+  },
+  "611": {
+    "referenceId": 161,
+    "lengthKey": "thigh_length",
+    "lengthFraction": 0.7820312499999964
+  },
+  "612": {
+    "referenceId": 164,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.6625000000000029
+  },
+  "613": {
+    "referenceId": 164,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.6624999999999901
+  },
+  "614": {
+    "referenceId": 164,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.9500000000000025
+  },
+  "615": {
+    "referenceId": 164,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.9499999999999895
+  },
+  "616": {
+    "referenceId": 175
+  },
+  "617": {
+    "referenceId": 177
+  },
+  "618": {
+    "referenceId": 177
+  },
+  "619": {
+    "referenceId": 451,
+    "lengthKey": "lower_arm_length",
+    "lengthFraction": 0.6500044183678552
+  },
+  "620": {
+    "referenceId": 451,
+    "lengthKey": "lower_arm_length",
+    "lengthFraction": 0.6499955784158555
+  },
+  "621": {
+    "referenceId": 496,
+    "lengthKey": "thigh_length",
+    "lengthFraction": 0.782031249999994
+  },
+  "622": {
+    "referenceId": 496,
+    "lengthKey": "thigh_length",
+    "lengthFraction": 0.7820312500000088
+  },
+  "623": {
+    "referenceId": 505,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.6624999999999719
+  },
+  "624": {
+    "referenceId": 505,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.662499999999985
+  },
+  "625": {
+    "referenceId": 505,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.949999999999967
+  },
+  "626": {
+    "referenceId": 505,
+    "lengthKey": "lower_leg_length",
+    "lengthFraction": 0.9499999999999801
+  }
+}

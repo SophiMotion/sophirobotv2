@@ -11,7 +11,7 @@ export const appearanceFinish:Record<number,{color:number;highlight:number}>={
 };
 for(const id of [2010,2012,2014,2016])appearanceFinish[id]={color:0xf2f2f2,highlight:0x919191};
 for(const id of [2011,2013,2015,2017])appearanceFinish[id]={color:0x181818,highlight:0x686868};
-export const appearanceDefaults=(version:BaseVersion):Params=>({...baseDefaults(version),total_height:1810,shoulder_length:350,hip_length:320,hip_position:880,upper_arm_length:120,lower_arm_length:200,thigh_length:320,lower_leg_length:320});
+export const appearanceDefaults=(version:BaseVersion):Params=>({...baseDefaults(version),total_height:1810,shoulder_length:350,hip_length:320,hip_position:880,upper_arm_length:120,lower_arm_length:200,thigh_length:320,lower_leg_length:400});
 // The appearance head extends 82.25 mm above the mechanism's reference top.
 export const mechanismParams=(p:Params):Params=>({...p,total_height:p.total_height-82.25});
 export function deformAppearance(id:number,positions:number[],p:Params){
@@ -21,7 +21,7 @@ export function deformAppearance(id:number,positions:number[],p:Params){
    const arm=id>=2014,side=[2012,2013,2016,2017].includes(id)?1:-1,lower=id%2===1;
    a[i]+=side*((arm?p.shoulder_length-350:p.hip_length-320)/2);
    if(arm){if(lower)a[i+2]=1236.75-(1236.75-a[i+2])*p.lower_arm_length/200;a[i+2]+=height-(p.upper_arm_length-120);}
-   else {const top=lower?667.5:1048.75;a[i+2]=top-(top-a[i+2])*(lower?p.lower_leg_length:p.thigh_length)/320+hip-(lower?p.thigh_length-320:0);}
+   else {const top=lower?667.5:1048.75;a[i+2]=top-(top-a[i+2])*(lower?p.lower_leg_length/400:p.thigh_length/320)+hip-(lower?p.thigh_length-320:0);}
   }
   else if(id===2000)a[i+2]+=height;
   else if(id===2001||id===2002){a[i]+=(id===2002?1:-1)*(p.shoulder_length-350)/2;a[i+2]+=height;}

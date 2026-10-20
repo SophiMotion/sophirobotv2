@@ -43,7 +43,7 @@ export function validate(p:Params,baseVersion:BaseVersion='new'):string[]{
  if(p.wheel_track/2+(baseVersion==='old'?25:81)+p.thin_sheet>=p.base_width/2) errors.push(baseVersion==='old'?'The wheels need more clearance. Increase base width or reduce wheel track.':'The motor assembly needs 81 mm outside each wheel center. Increase base width or reduce wheel track.');
  if(p.od_tire-p.tire_thickness<70) errors.push('The rim diameter must be at least 70 mm to clear the fixed hub.');
  if(p.od_tire+8>=50+p.base_height-p.thin_sheet) errors.push('The tire must clear the underside of the top deck by at least 8 mm.');
- if(407.5+p.hip_position-800-(p.thigh_length-250)-(p.lower_leg_length-250)<270) errors.push('The neutral leg tubes need 20 mm clearance above the deck. Shorten the legs or raise hip position.');
+ if(407.5+p.hip_position-800-(p.thigh_length-250)-(p.lower_leg_length-250)<267.5) errors.push('The neutral leg tubes need 17.5 mm clearance above the deck. Shorten the legs or raise hip position.');
  if(p.hip_position+50+p.base_height+80>=p.total_height-171.75) errors.push('The hip needs at least 80 mm clearance below the shoulder. Lower the hip or increase total height.');
  return errors;
 }

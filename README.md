@@ -1,6 +1,6 @@
 # SophiStudio — SophiRobot
 
-Current assembly: **Assembly_V2_website_new platform .step**, 507 source mesh bodies, dark blue-black theme. This version includes motor housings, bearings, joint brackets, head hardware and grippers. Default overall height is 1875.75 mm. The revised left shoulder bracket places both arm tubes at the same height.
+Current skeleton: **Assembly_V2_Appearance mounting .step**, 551 source bodies, with 13 retained Appearance 2 covers (564 bodies on V1; 547 on V2). See [mounting model notes](docs/mounting-model.md) for current dimensions and mappings. Historical model notes below describe earlier versions. This version includes motor housings, bearings, joint brackets, head hardware and grippers. Default overall height is 1875.75 mm. The revised left shoulder bracket places both arm tubes at the same height.
 
 ## Run
 

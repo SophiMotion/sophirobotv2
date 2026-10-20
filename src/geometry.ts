@@ -1,3 +1,4 @@
+import mountingParts from './mounting-parts.json';
 import {appearanceKey,deformAppearance,mechanismParams} from './appearance';
 import {defaults,oldPlatformDefaults,rampStart,type Params,type BaseVersion} from './parameters';
 import {oldBaseRole,deformOldBase} from './old-base';
@@ -26,6 +27,8 @@ function map(v:number,from:number[],to:number[]){let i=0;while(i<from.length-2&&
 const same=(p:Params)=>Object.keys(defaults).every(k=>p[k as keyof Params]===defaults[k as keyof Params]);
 export function deform(m:SourceMesh,p:Params):Float64Array{
  if(appearanceKey(m.id))return deformAppearance(m.id,m.positions,p);
+ const mount=mountingParts[String(m.id) as keyof typeof mountingParts];
+ if(mount&&'chestHeightRatio' in mount){const a=Float64Array.from(m.positions),hip=p.base_height-200+p.hip_position-880,height=p.total_height-1810;for(let i=0;i<a.length;i+=3){a[i]+=mount.centerX*(p.shoulder_length-350)/350;a[i+2]+=(1-mount.chestHeightRatio)*hip+mount.chestHeightRatio*height;}return a;}
  if(m.appearance)p=mechanismParams(p);
  if(m.platform==='old'){
   if(Object.keys(oldPlatformDefaults).every(k=>p[k as keyof Params]===oldPlatformDefaults[k as keyof Params]))return Float64Array.from(m.positions);
