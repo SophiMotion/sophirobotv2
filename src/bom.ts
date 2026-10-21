@@ -1,3 +1,4 @@
+import {setupAppearanceLink} from './appearance-link';
 import './bom.css';
 import './i18n.css';
 import {installLanguageSelector} from './i18n';
@@ -6,7 +7,7 @@ const esc=(s:string)=>s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;
 const money=(fen:number)=>new Intl.NumberFormat('en-CN',{style:'currency',currency:'CNY'}).format(fen/100);
 const total=quotation.sections.reduce((sum,s)=>sum+s.totalFen,0);
 document.querySelector('#bom-app')!.innerHTML=`<header><a class="brand" href="./">Sophi<span>Studio</span></a><span class="project">SophiRobot</span><span class="page-marker">Quotation</span></header>
-<nav class="project-navigation" aria-label="Project pages"><a href="./">Configurator</a><a href="./bom.html" aria-current="page">Quotation</a></nav>
+<nav class="project-navigation" aria-label="Project pages"><a href="./">Configurator</a><a href="./bom.html" aria-current="page">Quotation</a><a href="./appearance.html" data-open-appearance target="_blank" rel="noopener" aria-label="Appearance Studio (opens in a new window)">Appearance Studio <span aria-hidden="true">↗</span></a></nav>
 <main class="quotation"><div class="page-heading"><div><p class="eyebrow">SOPHIROBOT / QUOTATION</p><h1>Quotation</h1><p class="intro">Whole robot · Fixed section prices · Chinese yuan</p></div><div class="actions"><a class="export-excel" href="./SophiRobot-Quotation-CNY.xlsx" download>Export Excel ↓</a></div></div>
 <section class="summary" aria-label="Quotation summary"><div><span>Total quotation · CNY</span><strong>${money(total)}</strong></div><div><span>Sections</span><strong>6</strong></div><div><span>Configuration</span><strong class="scope-summary">2 arms · 2 hands · 2 legs</strong></div></section>
 <p class="notice">Prices and quantities are fixed from the supplied workbook. Model and motor selections do not change this quotation.</p>
@@ -23,3 +24,5 @@ document.querySelector<HTMLInputElement>('#quotation-search')!.oninput=event=>{
 document.querySelector<HTMLButtonElement>('#expand-all')!.onclick=()=>sections.forEach(s=>s.open=true);
 document.querySelector<HTMLButtonElement>('#collapse-all')!.onclick=()=>sections.forEach(s=>s.open=false);
 installLanguageSelector();
+
+setupAppearanceLink();

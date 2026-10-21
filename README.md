@@ -116,3 +116,7 @@ Live website: https://sophimotion.github.io/sophirobotv2/
 
 Pushing to `main` runs `.github/workflows/pages.yml`: install dependencies, run tests, build with Vite, and deploy `dist` to GitHub Pages. The workflow can also be started manually from GitHub Actions. Both model variants, the quotation workbook, and Fusion helper downloads are included. Relative asset paths support the `/SophiRobot/` URL and local hosting.
 
+
+## Appearance Studio
+
+Use **Appearance Studio ↗** to open a separate fitting window and overlay your own STL/STEP covers on the V1 or V2 skeleton. Position, rotate, scale, recolor, and show/hide each uploaded file independently. Files are processed locally in the browser and cleared on reload. See [Appearance Studio instructions](docs/appearance-studio.md).

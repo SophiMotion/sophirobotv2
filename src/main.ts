@@ -1,3 +1,4 @@
+import {setupAppearanceLink} from './appearance-link';
 import {appearanceDefaults as baseDefaults,appearanceLabels} from './appearance';
 import './styles.css';
 import './i18n.css';
@@ -29,7 +30,7 @@ const button=(id:string,label:string,ico:string,cls='')=>`<button id="${id}" cla
 
 $('#app').innerHTML=`
  <header class="header"><a class="brand" href="./" aria-label="SophiStudio home">${icon('cube')}<span>Sophi<span class="brand-x">Studio</span></span></a><div class="project-title">SophiRobot</div><div class="header-actions">${button('reset','Reset','reset')}${button('import','Load configuration','upload','icon-button')}${button('save','Save configuration','save','primary')}</div></header>
- <nav class="project-navigation" aria-label="Project pages"><a href="./" aria-current="page">Configurator</a><a id="open-bom" href="./bom.html">Quotation</a></nav>
+ <nav class="project-navigation" aria-label="Project pages"><a href="./" aria-current="page">Configurator</a><a id="open-bom" href="./bom.html">Quotation</a><a href="./appearance.html" data-open-appearance target="_blank" rel="noopener" aria-label="Appearance Studio (opens in a new window)">Appearance Studio <span aria-hidden="true">↗</span></a></nav>
  <main class="workspace">
   <aside class="sidebar" aria-label="Assembly parameters"><div class="panel-heading"><h1>Parameters</h1><p>Dimensions in millimeters</p></div>
    <div class="tabs" role="tablist" aria-label="Parameter groups">${(['Base','Wheels','Body','Limbs','Head','Motors','Appearance'] as Tab[]).map(t=>`<button role="tab" id="tab-${t}" aria-controls="fields" aria-selected="${t===activeTab}" data-tab="${t}">${t}</button>`).join('')}</div>
@@ -221,3 +222,5 @@ boot();
 
 installLanguageSelector();
 
+
+setupAppearanceLink();
